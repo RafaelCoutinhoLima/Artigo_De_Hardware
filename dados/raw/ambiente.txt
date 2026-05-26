@@ -1,0 +1,146 @@
+=== AMBIENTE DO EXPERIMENTO ===
+Data: Mon May 25 07:57:25 -03 2026
+
+=== SISTEMA OPERACIONAL ===
+Linux rafael-coutinho-ASUS-TUF-Gaming-F15-FX507VU-FX507VU 6.17.0-29-generic #29-Ubuntu SMP PREEMPT_DYNAMIC Tue May  5 19:42:34 UTC 2026 x86_64 GNU/Linux
+
+Distributor ID:	Ubuntu
+Description:	Ubuntu 25.10
+Release:	25.10
+Codename:	questing
+
+=== CPU ===
+Arquitetura:                             x86_64
+Modo(s) operacional da CPU:              32-bit, 64-bit
+Address sizes:                           39 bits physical, 48 bits virtual
+Ordem dos bytes:                         Little Endian
+CPU(s):                                  16
+Lista de CPU(s) on-line:                 0-15
+ID de fornecedor:                        GenuineIntel
+Nome do modelo:                          13th Gen Intel(R) Core(TM) i7-13620H
+Família da CPU:                          6
+Modelo:                                  186
+Thread(s) per núcleo:                    2
+Núcleo(s) por soquete:                   10
+Soquete(s):                              1
+Step:                                    2
+CPU(s) scaling MHz:                      19%
+CPU MHz máx.:                            4900,0000
+CPU MHz mín.:                            400,0000
+BogoMIPS:                                5836,80
+Opções:                                  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+Virtualização:                           VT-x
+cache de L1d:                            416 KiB (10 instances)
+cache de L1i:                            448 KiB (10 instances)
+cache de L2:                             9,5 MiB (7 instances)
+cache de L3:                             24 MiB (1 instance)
+Nó(s) de NUMA:                           1
+CPU(s) de nó0 NUMA:                      0-15
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Ghostwrite:                Not affected
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Old microcode:             Not affected
+Vulnerability Reg file data sampling:    Mitigation; Clear Register File
+Vulnerability Retbleed:                  Not affected
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Mitigation; IBPB before exit to userspace
+
+=== MEMÓRIA ===
+               total       usada       livre    compart.  buff/cache  disponível
+Mem.:           14Gi       5,3Gi       5,0Gi       724Mi       5,5Gi       9,5Gi
+Swap:          3,8Gi          0B       3,8Gi
+
+=== STORAGE ===
+NAME      SIZE TYPE ROTA TRAN
+loop0       4K loop    0 
+loop1     380M loop    0 
+loop3    63,8M loop    0 
+loop4    63,8M loop    0 
+loop5      74M loop    0 
+loop6      74M loop    0 
+loop7    66,8M loop    0 
+loop8     5,2M loop    0 
+loop9    66,8M loop    0 
+loop10    5,1M loop    0 
+loop11   19,7M loop    0 
+loop12     20M loop    0 
+loop13  178,4M loop    0 
+loop14  178,4M loop    0 
+loop15  246,6M loop    0 
+loop16  247,5M loop    0 
+loop17   16,4M loop    0 
+loop18   16,5M loop    0 
+loop19  516,2M loop    0 
+loop20  531,4M loop    0 
+loop21  606,1M loop    0 
+loop22   91,7M loop    0 
+loop23    395M loop    0 
+loop24   18,8M loop    0 
+loop25   15,6M loop    0 
+loop26   15,7M loop    0 
+loop27   18,8M loop    0 
+loop28   48,4M loop    0 
+loop29   49,3M loop    0 
+loop30    576K loop    0 
+loop31    580K loop    0 
+loop32  227,7M loop    0 
+loop33  227,7M loop    0 
+loop34  484,1M loop    0 
+loop35  394,9M loop    0 
+nvme1n1 476,9G disk    0 nvme
+nvme0n1 931,5G disk    0 nvme
+
+=== CPU GOVERNOR ===
+/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu10/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu11/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu12/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu13/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu14/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu15/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu1/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu2/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu3/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu4/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu5/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu6/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu7/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu8/cpufreq/scaling_governor: powersave
+/sys/devices/system/cpu/cpu9/cpufreq/scaling_governor: powersave
+
+=== FREQUÊNCIAS ATUAIS ===
+/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: 409718 kHz
+/sys/devices/system/cpu/cpu10/cpufreq/scaling_cur_freq: 399751 kHz
+/sys/devices/system/cpu/cpu11/cpufreq/scaling_cur_freq: 1041246 kHz
+/sys/devices/system/cpu/cpu12/cpufreq/scaling_cur_freq: 1441399 kHz
+/sys/devices/system/cpu/cpu13/cpufreq/scaling_cur_freq: 400000 kHz
+/sys/devices/system/cpu/cpu14/cpufreq/scaling_cur_freq: 604552 kHz
+/sys/devices/system/cpu/cpu15/cpufreq/scaling_cur_freq: 1387373 kHz
+/sys/devices/system/cpu/cpu1/cpufreq/scaling_cur_freq: 1200960 kHz
+/sys/devices/system/cpu/cpu2/cpufreq/scaling_cur_freq: 647631 kHz
+/sys/devices/system/cpu/cpu3/cpufreq/scaling_cur_freq: 1450857 kHz
+/sys/devices/system/cpu/cpu4/cpufreq/scaling_cur_freq: 1100013 kHz
+/sys/devices/system/cpu/cpu5/cpufreq/scaling_cur_freq: 400857 kHz
+/sys/devices/system/cpu/cpu6/cpufreq/scaling_cur_freq: 1009523 kHz
+/sys/devices/system/cpu/cpu7/cpufreq/scaling_cur_freq: 1171049 kHz
+/sys/devices/system/cpu/cpu8/cpufreq/scaling_cur_freq: 727962 kHz
+/sys/devices/system/cpu/cpu9/cpufreq/scaling_cur_freq: 400000 kHz
+
+=== FERRAMENTAS ===
+sysbench 1.0.20
+stress-ng, version 0.19.03 (gcc 15.1.0, x86_64 Linux 6.17.0-29-generic)
+fio-3.39
+Error: no array size given!
+Python 3.13.7
+Governor atualizado para: performance

@@ -1,0 +1,9 @@
+metrica,comparacao,teste,statistic,p_value,rejeita_H0
+paralelismo_tempo,1vs10,t_pareado,-89.7676,0.0,sim
+paralelismo_tempo,1vs10,wilcoxon,0.0,0.0,sim
+paralelismo_tempo,10vs16,t_pareado,-21.7264,0.0,sim
+paralelismo_tempo,10vs16,wilcoxon,0.0,0.0,sim
+sysbench_eps,1vs10,t_pareado,-2448.2937,0.0,sim
+sysbench_eps,1vs10,wilcoxon,0.0,0.0,sim
+sysbench_eps,10vs16,t_pareado,-0.2501,0.804253,não
+sysbench_eps,10vs16,wilcoxon,168.0,0.19093,não

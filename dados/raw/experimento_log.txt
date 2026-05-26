@@ -1,0 +1,330 @@
+
+============================================================
+  Threads: 1  |  warmup=3  medicoes=30
+============================================================
+  [warmup] w1 w2 w3 
+  rep 01/30  paralelismo=0.084s  sysbench=1526.7 ev/s
+  rep 02/30  paralelismo=0.080s  sysbench=1531.3 ev/s
+  rep 03/30  paralelismo=0.093s  sysbench=1527.7 ev/s
+  rep 04/30  paralelismo=0.090s  sysbench=1529.4 ev/s
+  rep 05/30  paralelismo=0.088s  sysbench=1532.6 ev/s
+  rep 06/30  paralelismo=0.140s  sysbench=1527.7 ev/s
+  rep 07/30  paralelismo=0.121s  sysbench=1527.3 ev/s
+  rep 08/30  paralelismo=0.082s  sysbench=1532.0 ev/s
+  rep 09/30  paralelismo=0.087s  sysbench=1531.7 ev/s
+  rep 10/30  paralelismo=0.089s  sysbench=1529.4 ev/s
+  rep 11/30  paralelismo=0.096s  sysbench=1532.4 ev/s
+  rep 12/30  paralelismo=0.080s  sysbench=1531.5 ev/s
+  rep 13/30  paralelismo=0.087s  sysbench=1530.1 ev/s
+  rep 14/30  paralelismo=0.093s  sysbench=1530.7 ev/s
+  rep 15/30  paralelismo=0.092s  sysbench=1528.8 ev/s
+  rep 16/30  paralelismo=0.108s  sysbench=1531.2 ev/s
+  rep 17/30  paralelismo=0.117s  sysbench=1532.6 ev/s
+  rep 18/30  paralelismo=0.081s  sysbench=1528.1 ev/s
+  rep 19/30  paralelismo=0.087s  sysbench=1531.3 ev/s
+  rep 20/30  paralelismo=0.082s  sysbench=1528.5 ev/s
+  rep 21/30  paralelismo=0.087s  sysbench=1528.8 ev/s
+  rep 22/30  paralelismo=0.087s  sysbench=1529.0 ev/s
+  rep 23/30  paralelismo=0.085s  sysbench=1529.5 ev/s
+  rep 24/30  paralelismo=0.091s  sysbench=1528.9 ev/s
+  rep 25/30  paralelismo=0.105s  sysbench=1533.0 ev/s
+  rep 26/30  paralelismo=0.121s  sysbench=1530.7 ev/s
+  rep 27/30  paralelismo=0.091s  sysbench=1531.1 ev/s
+  rep 28/30  paralelismo=0.085s  sysbench=1530.0 ev/s
+  rep 29/30  paralelismo=0.079s  sysbench=1530.1 ev/s
+  rep 30/30  paralelismo=0.116s  sysbench=1526.8 ev/s
+  Dormindo 2s para esfriar CPU...
+
+============================================================
+  Threads: 2  |  warmup=3  medicoes=30
+============================================================
+  [warmup] w1 w2 w3 
+  rep 01/30  paralelismo=0.186s  sysbench=3044.6 ev/s
+  rep 02/30  paralelismo=0.206s  sysbench=3042.9 ev/s
+  rep 03/30  paralelismo=0.221s  sysbench=3043.0 ev/s
+  rep 04/30  paralelismo=0.201s  sysbench=3044.2 ev/s
+  rep 05/30  paralelismo=0.206s  sysbench=3035.8 ev/s
+  rep 06/30  paralelismo=0.203s  sysbench=3036.1 ev/s
+  rep 07/30  paralelismo=0.227s  sysbench=3035.0 ev/s
+  rep 08/30  paralelismo=0.217s  sysbench=3043.3 ev/s
+  rep 09/30  paralelismo=0.227s  sysbench=3055.8 ev/s
+  rep 10/30  paralelismo=0.196s  sysbench=3052.0 ev/s
+  rep 11/30  paralelismo=0.209s  sysbench=3053.1 ev/s
+  rep 12/30  paralelismo=0.205s  sysbench=3050.5 ev/s
+  rep 13/30  paralelismo=0.189s  sysbench=3051.2 ev/s
+  rep 14/30  paralelismo=0.206s  sysbench=3053.7 ev/s
+  rep 15/30  paralelismo=0.200s  sysbench=3050.6 ev/s
+  rep 16/30  paralelismo=0.190s  sysbench=3050.1 ev/s
+  rep 17/30  paralelismo=0.196s  sysbench=3053.2 ev/s
+  rep 18/30  paralelismo=0.198s  sysbench=3054.3 ev/s
+  rep 19/30  paralelismo=0.204s  sysbench=3055.2 ev/s
+  rep 20/30  paralelismo=0.186s  sysbench=3055.6 ev/s
+  rep 21/30  paralelismo=0.201s  sysbench=3052.1 ev/s
+  rep 22/30  paralelismo=0.199s  sysbench=3055.1 ev/s
+  rep 23/30  paralelismo=0.188s  sysbench=3057.2 ev/s
+  rep 24/30  paralelismo=0.207s  sysbench=3055.5 ev/s
+  rep 25/30  paralelismo=0.220s  sysbench=3048.8 ev/s
+  rep 26/30  paralelismo=0.170s  sysbench=3037.5 ev/s
+  rep 27/30  paralelismo=0.198s  sysbench=3044.4 ev/s
+  rep 28/30  paralelismo=0.182s  sysbench=3037.7 ev/s
+  rep 29/30  paralelismo=0.183s  sysbench=3040.1 ev/s
+  rep 30/30  paralelismo=0.203s  sysbench=3041.0 ev/s
+  Dormindo 2s para esfriar CPU...
+
+============================================================
+  Threads: 4  |  warmup=3  medicoes=30
+============================================================
+  [warmup] w1 w2 w3 
+  rep 01/30  paralelismo=0.375s  sysbench=5909.3 ev/s
+  rep 02/30  paralelismo=0.338s  sysbench=5912.1 ev/s
+  rep 03/30  paralelismo=0.337s  sysbench=5911.6 ev/s
+  rep 04/30  paralelismo=0.317s  sysbench=5906.1 ev/s
+  rep 05/30  paralelismo=0.294s  sysbench=5912.6 ev/s
+  rep 06/30  paralelismo=0.307s  sysbench=5908.1 ev/s
+  rep 07/30  paralelismo=0.347s  sysbench=5912.7 ev/s
+  rep 08/30  paralelismo=0.328s  sysbench=5908.9 ev/s
+  rep 09/30  paralelismo=0.336s  sysbench=5910.2 ev/s
+  rep 10/30  paralelismo=0.291s  sysbench=5906.9 ev/s
+  rep 11/30  paralelismo=0.324s  sysbench=5908.6 ev/s
+  rep 12/30  paralelismo=0.340s  sysbench=5913.5 ev/s
+  rep 13/30  paralelismo=0.297s  sysbench=5921.2 ev/s
+  rep 14/30  paralelismo=0.335s  sysbench=5913.0 ev/s
+  rep 15/30  paralelismo=0.328s  sysbench=5924.9 ev/s
+  rep 16/30  paralelismo=0.320s  sysbench=5910.5 ev/s
+  rep 17/30  paralelismo=0.299s  sysbench=5920.6 ev/s
+  rep 18/30  paralelismo=0.290s  sysbench=5920.3 ev/s
+  rep 19/30  paralelismo=0.319s  sysbench=5922.0 ev/s
+  rep 20/30  paralelismo=0.257s  sysbench=5905.2 ev/s
+  rep 21/30  paralelismo=0.290s  sysbench=5917.1 ev/s
+  rep 22/30  paralelismo=0.292s  sysbench=5923.8 ev/s
+  rep 23/30  paralelismo=0.310s  sysbench=5906.9 ev/s
+  rep 24/30  paralelismo=0.283s  sysbench=5907.6 ev/s
+  rep 25/30  paralelismo=0.313s  sysbench=5910.9 ev/s
+  rep 26/30  paralelismo=0.259s  sysbench=5910.1 ev/s
+  rep 27/30  paralelismo=0.300s  sysbench=5909.3 ev/s
+  rep 28/30  paralelismo=0.293s  sysbench=5914.7 ev/s
+  rep 29/30  paralelismo=0.273s  sysbench=5907.5 ev/s
+  rep 30/30  paralelismo=0.297s  sysbench=5925.1 ev/s
+  Dormindo 2s para esfriar CPU...
+
+============================================================
+  Threads: 6  |  warmup=3  medicoes=30
+============================================================
+  [warmup] w1 w2 w3 
+  rep 01/30  paralelismo=0.438s  sysbench=8869.2 ev/s
+  rep 02/30  paralelismo=0.414s  sysbench=8857.7 ev/s
+  rep 03/30  paralelismo=0.368s  sysbench=8851.8 ev/s
+  rep 04/30  paralelismo=0.410s  sysbench=8862.9 ev/s
+  rep 05/30  paralelismo=0.426s  sysbench=8870.2 ev/s
+  rep 06/30  paralelismo=0.434s  sysbench=8863.0 ev/s
+  rep 07/30  paralelismo=0.378s  sysbench=8864.0 ev/s
+  rep 08/30  paralelismo=0.362s  sysbench=8866.1 ev/s
+  rep 09/30  paralelismo=0.390s  sysbench=8876.7 ev/s
+  rep 10/30  paralelismo=0.418s  sysbench=8873.9 ev/s
+  rep 11/30  paralelismo=0.453s  sysbench=8871.3 ev/s
+  rep 12/30  paralelismo=0.418s  sysbench=8862.0 ev/s
+  rep 13/30  paralelismo=0.423s  sysbench=8860.8 ev/s
+  rep 14/30  paralelismo=0.409s  sysbench=8869.8 ev/s
+  rep 15/30  paralelismo=0.423s  sysbench=8871.4 ev/s
+  rep 16/30  paralelismo=0.460s  sysbench=8871.9 ev/s
+  rep 17/30  paralelismo=0.430s  sysbench=8861.9 ev/s
+  rep 18/30  paralelismo=0.362s  sysbench=8869.7 ev/s
+  rep 19/30  paralelismo=0.388s  sysbench=8859.6 ev/s
+  rep 20/30  paralelismo=0.409s  sysbench=8866.8 ev/s
+  rep 21/30  paralelismo=0.406s  sysbench=8867.1 ev/s
+  rep 22/30  paralelismo=0.393s  sysbench=8860.6 ev/s
+  rep 23/30  paralelismo=0.354s  sysbench=8868.1 ev/s
+  rep 24/30  paralelismo=0.455s  sysbench=8855.8 ev/s
+  rep 25/30  paralelismo=0.483s  sysbench=8868.3 ev/s
+  rep 26/30  paralelismo=0.405s  sysbench=8869.3 ev/s
+  rep 27/30  paralelismo=0.403s  sysbench=8871.8 ev/s
+  rep 28/30  paralelismo=0.406s  sysbench=8860.6 ev/s
+  rep 29/30  paralelismo=0.387s  sysbench=8875.3 ev/s
+  rep 30/30  paralelismo=0.379s  sysbench=8866.7 ev/s
+  Dormindo 2s para esfriar CPU...
+
+============================================================
+  Threads: 8  |  warmup=3  medicoes=30
+============================================================
+  [warmup] w1 w2 w3 
+  rep 01/30  paralelismo=0.512s  sysbench=11414.7 ev/s
+  rep 02/30  paralelismo=0.519s  sysbench=11353.8 ev/s
+  rep 03/30  paralelismo=0.507s  sysbench=11344.5 ev/s
+  rep 04/30  paralelismo=0.495s  sysbench=11423.9 ev/s
+  rep 05/30  paralelismo=0.528s  sysbench=11373.9 ev/s
+  rep 06/30  paralelismo=0.519s  sysbench=11291.5 ev/s
+  rep 07/30  paralelismo=0.539s  sysbench=11364.0 ev/s
+  rep 08/30  paralelismo=0.524s  sysbench=11372.6 ev/s
+  rep 09/30  paralelismo=0.524s  sysbench=11423.2 ev/s
+  rep 10/30  paralelismo=0.493s  sysbench=11377.5 ev/s
+  rep 11/30  paralelismo=0.533s  sysbench=11394.7 ev/s
+  rep 12/30  paralelismo=0.550s  sysbench=11391.2 ev/s
+  rep 13/30  paralelismo=0.560s  sysbench=11393.2 ev/s
+  rep 14/30  paralelismo=0.497s  sysbench=11412.9 ev/s
+  rep 15/30  paralelismo=0.499s  sysbench=11415.3 ev/s
+  rep 16/30  paralelismo=0.502s  sysbench=11409.6 ev/s
+  rep 17/30  paralelismo=0.516s  sysbench=11418.5 ev/s
+  rep 18/30  paralelismo=0.555s  sysbench=11416.2 ev/s
+  rep 19/30  paralelismo=0.492s  sysbench=11419.4 ev/s
+  rep 20/30  paralelismo=0.551s  sysbench=11419.1 ev/s
+  rep 21/30  paralelismo=0.501s  sysbench=11433.0 ev/s
+  rep 22/30  paralelismo=0.511s  sysbench=11420.3 ev/s
+  rep 23/30  paralelismo=0.528s  sysbench=11429.0 ev/s
+  rep 24/30  paralelismo=0.487s  sysbench=11414.2 ev/s
+  rep 25/30  paralelismo=0.554s  sysbench=11412.2 ev/s
+  rep 26/30  paralelismo=0.548s  sysbench=11414.1 ev/s
+  rep 27/30  paralelismo=0.493s  sysbench=11430.2 ev/s
+  rep 28/30  paralelismo=0.540s  sysbench=11425.4 ev/s
+  rep 29/30  paralelismo=0.530s  sysbench=11403.6 ev/s
+  rep 30/30  paralelismo=0.472s  sysbench=11417.1 ev/s
+  Dormindo 2s para esfriar CPU...
+
+============================================================
+  Threads: 10  |  warmup=3  medicoes=30
+============================================================
+  [warmup] w1 w2 w3 
+  rep 01/30  paralelismo=0.605s  sysbench=13924.4 ev/s
+  rep 02/30  paralelismo=0.659s  sysbench=13897.2 ev/s
+  rep 03/30  paralelismo=0.673s  sysbench=13914.5 ev/s
+  rep 04/30  paralelismo=0.611s  sysbench=13898.1 ev/s
+  rep 05/30  paralelismo=0.672s  sysbench=13900.0 ev/s
+  rep 06/30  paralelismo=0.597s  sysbench=13896.3 ev/s
+  rep 07/30  paralelismo=0.641s  sysbench=13897.5 ev/s
+  rep 08/30  paralelismo=0.635s  sysbench=13861.8 ev/s
+  rep 09/30  paralelismo=0.591s  sysbench=13867.3 ev/s
+  rep 10/30  paralelismo=0.671s  sysbench=13866.6 ev/s
+  rep 11/30  paralelismo=0.641s  sysbench=13881.1 ev/s
+  rep 12/30  paralelismo=0.629s  sysbench=13876.5 ev/s
+  rep 13/30  paralelismo=0.640s  sysbench=13836.8 ev/s
+  rep 14/30  paralelismo=0.619s  sysbench=13836.5 ev/s
+  rep 15/30  paralelismo=0.645s  sysbench=13837.9 ev/s
+  rep 16/30  paralelismo=0.668s  sysbench=13858.2 ev/s
+  rep 17/30  paralelismo=0.661s  sysbench=13865.7 ev/s
+  rep 18/30  paralelismo=0.668s  sysbench=13863.2 ev/s
+  rep 19/30  paralelismo=0.663s  sysbench=13875.0 ev/s
+  rep 20/30  paralelismo=0.588s  sysbench=13881.1 ev/s
+  rep 21/30  paralelismo=0.628s  sysbench=13837.1 ev/s
+  rep 22/30  paralelismo=0.621s  sysbench=13805.1 ev/s
+  rep 23/30  paralelismo=0.666s  sysbench=13836.6 ev/s
+  rep 24/30  paralelismo=0.655s  sysbench=13859.6 ev/s
+  rep 25/30  paralelismo=0.620s  sysbench=13848.7 ev/s
+  rep 26/30  paralelismo=0.632s  sysbench=13858.5 ev/s
+  rep 27/30  paralelismo=0.654s  sysbench=13852.8 ev/s
+  rep 28/30  paralelismo=0.634s  sysbench=13832.7 ev/s
+  rep 29/30  paralelismo=0.655s  sysbench=13858.0 ev/s
+  rep 30/30  paralelismo=0.588s  sysbench=13879.0 ev/s
+  Dormindo 2s para esfriar CPU...
+
+============================================================
+  Threads: 12  |  warmup=3  medicoes=30
+============================================================
+  [warmup] w1 w2 w3 
+  rep 01/30  paralelismo=0.727s  sysbench=13975.7 ev/s
+  rep 02/30  paralelismo=0.705s  sysbench=13693.7 ev/s
+  rep 03/30  paralelismo=0.721s  sysbench=13777.5 ev/s
+  rep 04/30  paralelismo=0.669s  sysbench=13730.4 ev/s
+  rep 05/30  paralelismo=0.723s  sysbench=13949.9 ev/s
+  rep 06/30  paralelismo=0.694s  sysbench=13793.6 ev/s
+  rep 07/30  paralelismo=0.725s  sysbench=13786.0 ev/s
+  rep 08/30  paralelismo=0.720s  sysbench=13774.0 ev/s
+  rep 09/30  paralelismo=0.707s  sysbench=13912.3 ev/s
+  rep 10/30  paralelismo=0.679s  sysbench=13780.9 ev/s
+  rep 11/30  paralelismo=0.720s  sysbench=13932.3 ev/s
+  rep 12/30  paralelismo=0.685s  sysbench=13908.1 ev/s
+  rep 13/30  paralelismo=0.657s  sysbench=13791.4 ev/s
+  rep 14/30  paralelismo=0.700s  sysbench=13945.9 ev/s
+  rep 15/30  paralelismo=0.699s  sysbench=13886.1 ev/s
+  rep 16/30  paralelismo=0.706s  sysbench=13685.8 ev/s
+  rep 17/30  paralelismo=0.732s  sysbench=13914.8 ev/s
+  rep 18/30  paralelismo=0.671s  sysbench=13860.2 ev/s
+  rep 19/30  paralelismo=0.664s  sysbench=13861.4 ev/s
+  rep 20/30  paralelismo=0.712s  sysbench=13812.2 ev/s
+  rep 21/30  paralelismo=0.688s  sysbench=13791.7 ev/s
+  rep 22/30  paralelismo=0.699s  sysbench=13849.0 ev/s
+  rep 23/30  paralelismo=0.734s  sysbench=13687.5 ev/s
+  rep 24/30  paralelismo=0.771s  sysbench=13851.8 ev/s
+  rep 25/30  paralelismo=0.707s  sysbench=13856.2 ev/s
+  rep 26/30  paralelismo=0.732s  sysbench=13789.0 ev/s
+  rep 27/30  paralelismo=0.708s  sysbench=13829.8 ev/s
+  rep 28/30  paralelismo=0.695s  sysbench=13696.5 ev/s
+  rep 29/30  paralelismo=0.641s  sysbench=13885.1 ev/s
+  rep 30/30  paralelismo=0.704s  sysbench=13925.6 ev/s
+  Dormindo 2s para esfriar CPU...
+
+============================================================
+  Threads: 14  |  warmup=3  medicoes=30
+============================================================
+  [warmup] w1 w2 w3 
+  rep 01/30  paralelismo=0.744s  sysbench=13816.8 ev/s
+  rep 02/30  paralelismo=0.819s  sysbench=13823.0 ev/s
+  rep 03/30  paralelismo=0.741s  sysbench=14000.8 ev/s
+  rep 04/30  paralelismo=0.682s  sysbench=13822.9 ev/s
+  rep 05/30  paralelismo=0.753s  sysbench=13975.7 ev/s
+  rep 06/30  paralelismo=0.698s  sysbench=13975.5 ev/s
+  rep 07/30  paralelismo=0.711s  sysbench=13747.9 ev/s
+  rep 08/30  paralelismo=0.716s  sysbench=13788.5 ev/s
+  rep 09/30  paralelismo=0.739s  sysbench=13998.3 ev/s
+  rep 10/30  paralelismo=0.750s  sysbench=13776.5 ev/s
+  rep 11/30  paralelismo=0.784s  sysbench=13799.0 ev/s
+  rep 12/30  paralelismo=0.732s  sysbench=13827.0 ev/s
+  rep 13/30  paralelismo=0.765s  sysbench=13834.0 ev/s
+  rep 14/30  paralelismo=0.690s  sysbench=13883.9 ev/s
+  rep 15/30  paralelismo=0.713s  sysbench=13790.8 ev/s
+  rep 16/30  paralelismo=0.714s  sysbench=13737.1 ev/s
+  rep 17/30  paralelismo=0.722s  sysbench=13784.3 ev/s
+  rep 18/30  paralelismo=0.762s  sysbench=13952.2 ev/s
+  rep 19/30  paralelismo=0.733s  sysbench=13893.5 ev/s
+  rep 20/30  paralelismo=0.664s  sysbench=13793.2 ev/s
+  rep 21/30  paralelismo=0.729s  sysbench=13757.4 ev/s
+  rep 22/30  paralelismo=0.721s  sysbench=13783.2 ev/s
+  rep 23/30  paralelismo=0.779s  sysbench=13708.7 ev/s
+  rep 24/30  paralelismo=0.725s  sysbench=13741.0 ev/s
+  rep 25/30  paralelismo=0.835s  sysbench=13793.0 ev/s
+  rep 26/30  paralelismo=0.749s  sysbench=13925.7 ev/s
+  rep 27/30  paralelismo=0.766s  sysbench=13740.2 ev/s
+  rep 28/30  paralelismo=0.857s  sysbench=13736.1 ev/s
+  rep 29/30  paralelismo=0.796s  sysbench=13755.1 ev/s
+  rep 30/30  paralelismo=0.751s  sysbench=13771.6 ev/s
+  Dormindo 2s para esfriar CPU...
+
+============================================================
+  Threads: 16  |  warmup=3  medicoes=30
+============================================================
+  [warmup] w1 w2 w3 
+  rep 01/30  paralelismo=0.833s  sysbench=13890.5 ev/s
+  rep 02/30  paralelismo=0.778s  sysbench=13859.2 ev/s
+  rep 03/30  paralelismo=0.773s  sysbench=13846.0 ev/s
+  rep 04/30  paralelismo=0.761s  sysbench=13894.6 ev/s
+  rep 05/30  paralelismo=0.832s  sysbench=13813.2 ev/s
+  rep 06/30  paralelismo=0.805s  sysbench=13831.4 ev/s
+  rep 07/30  paralelismo=0.808s  sysbench=13894.8 ev/s
+  rep 08/30  paralelismo=0.776s  sysbench=13853.3 ev/s
+  rep 09/30  paralelismo=0.840s  sysbench=13840.7 ev/s
+  rep 10/30  paralelismo=0.770s  sysbench=13838.2 ev/s
+  rep 11/30  paralelismo=0.838s  sysbench=13883.8 ev/s
+  rep 12/30  paralelismo=0.790s  sysbench=13881.7 ev/s
+  rep 13/30  paralelismo=0.857s  sysbench=13859.0 ev/s
+  rep 14/30  paralelismo=0.823s  sysbench=13834.3 ev/s
+  rep 15/30  paralelismo=0.790s  sysbench=13830.6 ev/s
+  rep 16/30  paralelismo=0.779s  sysbench=13829.7 ev/s
+  rep 17/30  paralelismo=0.815s  sysbench=13884.2 ev/s
+  rep 18/30  paralelismo=0.869s  sysbench=13799.0 ev/s
+  rep 19/30  paralelismo=0.787s  sysbench=13866.1 ev/s
+  rep 20/30  paralelismo=0.798s  sysbench=13837.5 ev/s
+  rep 21/30  paralelismo=0.835s  sysbench=13826.7 ev/s
+  rep 22/30  paralelismo=0.808s  sysbench=13859.6 ev/s
+  rep 23/30  paralelismo=0.810s  sysbench=13847.9 ev/s
+  rep 24/30  paralelismo=0.762s  sysbench=13846.6 ev/s
+  rep 25/30  paralelismo=0.844s  sysbench=13828.5 ev/s
+  rep 26/30  paralelismo=0.755s  sysbench=13872.3 ev/s
+  rep 27/30  paralelismo=0.828s  sysbench=13809.9 ev/s
+  rep 28/30  paralelismo=0.776s  sysbench=14006.3 ev/s
+  rep 29/30  paralelismo=0.814s  sysbench=14030.0 ev/s
+  rep 30/30  paralelismo=0.796s  sysbench=14104.8 ev/s
+  Dormindo 2s para esfriar CPU...
+
+============================================================
+  Experimento concluído!
+  → /home/rafael-coutinho/Área de trabalho/Artigo_De_Hardware/scripts/../dados/raw/paralelismo_raw.csv
+  → /home/rafael-coutinho/Área de trabalho/Artigo_De_Hardware/scripts/../dados/raw/sysbench_raw.csv
+============================================================
