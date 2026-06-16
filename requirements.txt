@@ -1,0 +1,8 @@
+# Dependencias Python do experimento (Python 3.13)
+# Versoes do ambiente original de coleta (i7-13620H, Ubuntu 25.10).
+# Para reproducao fiel, use estas versoes; para reexecucao geral, >= tambem funciona.
+numpy==2.4.4
+scipy==1.17.1
+pandas==3.0.3
+matplotlib==3.10.1
+seaborn==0.13.2
