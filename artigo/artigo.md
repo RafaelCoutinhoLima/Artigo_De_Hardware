@@ -12,7 +12,7 @@
 
 Este artigo investiga quantitativamente o impacto do Simultaneous Multithreading (SMT/HyperThreading) e da contenção de cache L3 na eficiência de paralelismo em cargas CPU-bound no processador Intel Core i7-13620H (13ª geração, arquitetura híbrida Raptor Lake-H). Foram realizadas 30 repetições medidas por configuração de threads ∈ {1, 2, 4, 6, 8, 10, 12, 14, 16}, precedidas de 3 aquecimentos descartados. Dois experimentos foram conduzidos: (A) multiplicação de matrizes 800×800 via `multiprocessing.Pool` em escalonamento fraco (*weak scaling*), e (B) benchmark `sysbench cpu` em escalonamento forte (*strong scaling*). No experimento sysbench, o throughput aumenta de 1530,0 para 13866,8 eventos/s ao escalar de 1 para 10 threads (eficiência 90,6%), mas **estagna** em 13870,0 eventos/s com 16 threads — diferença de apenas 0,02% entre 10 e 16 threads (p = 0.804253, teste t pareado). A eficiência por thread cai de 90,6% (10 threads) para 56,7% (16 threads), confirmando que o SMT não contribui com throughput adicional em cargas puramente CPU-bound. No experimento de weak scaling, o overhead de criação de processos Python (`spawn`) domina, com eficiência de apenas 11,7% com 16 processos. Todos os dados e scripts estão publicamente disponíveis para reprodução.
 
-**Palavras-chave:** SMT; HyperThreading; cache L3; paralelismo; processadores híbridos; Intel Raptor Lake; weak scaling; strong scaling.
+**Palavras-chave:** SMT; eficiência paralela; contenção de cache; processadores híbridos; avaliação de desempenho.
 
 ---
 
@@ -36,9 +36,11 @@ Este trabalho responde à seguinte **pergunta de pesquisa**: *Qual é o impacto 
 O impacto do SMT em cargas CPU-bound foi documentado por Tullsen et al. [1],
 que introduziram o conceito de multithreading simultâneo no ISCA 1995,
 demonstrando ganhos em workloads com alta latência de memória mas limitações
-em cargas compute-bound. Eyerman e Eeckhout [2] quantificaram a penalidade
-de desempenho do SMT em benchmarks CPU-intensivos, observando que a
-competição por unidades de execução anula os ganhos teóricos.
+em cargas compute-bound. Eyerman e Eeckhout [2] propuseram uma arquitetura de
+contabilização de ciclos por thread (*per-thread cycle accounting*) em
+processadores SMT, mostrando como cada thread é penalizada ao compartilhar
+recursos de execução — base para entender por que a competição por unidades
+funcionais reduz os ganhos do SMT em cargas CPU-intensivas.
 
 A contenção de cache compartilhado em sistemas multicore foi estudada por
 Blagodurov et al. [3], que demonstraram degradação de desempenho proporcional
@@ -57,9 +59,11 @@ curta duração, o que explica a eficiência de apenas 11,7% observada com
 A arquitetura híbrida Intel (P-cores + E-cores), introduzida no Alder Lake
 e presente no i7-13620H (Raptor Lake), é descrita em detalhe pela Intel [6],
 incluindo o mecanismo Thread Director que orienta o escalonador Linux na
-distribuição de cargas entre os dois tipos de núcleo. O impacto do governor
-de CPU na reprodutibilidade de benchmarks foi discutido por Mazoyer et al. [7],
-motivando o uso do modo `performance` neste experimento.
+distribuição de cargas entre os dois tipos de núcleo. Por fim, Mytkowicz et al. [7]
+demonstraram que fatores aparentemente inócuos do ambiente de medição
+(configurações de SO e hardware, variáveis de ambiente) podem enviesar
+resultados de benchmarks, o que motivou o controle de ambiente adotado aqui —
+modo `performance` do governor, descarte de *warm-up* e 30 repetições por configuração.
 
 ---
 
@@ -72,11 +76,11 @@ motivando o uso do modo `performance` neste experimento.
 | Processador | Intel Core i7-13620H (Raptor Lake-H, 13ª geração) |
 | Núcleos físicos | 10 (6 P-cores + 4 E-cores) |
 | Threads lógicas | 16 (P-cores com SMT 2×; E-cores sem SMT) |
-| Cache L1d | 6 × 48 KB (P-cores) |
-| Cache L1i | 6 × 32 KB (P-cores) |
-| Cache L2 | 6 × 1.280 KB (P-cores) |
-| Cache L3 | 24 MB (compartilhado por todos os núcleos) |
-| Memória RAM | 15 GB DDR5 |
+| Cache L1d | 416 KiB (10 instâncias) |
+| Cache L1i | 448 KiB (10 instâncias) |
+| Cache L2 | 9,5 MiB (7 instâncias) |
+| Cache L3 | 24 MiB (1 instância, compartilhado) |
+| Memória RAM | 14 GiB DDR5 |
 | Armazenamento | NVMe PCIe Gen4 |
 
 ### 3.2 Software
@@ -156,12 +160,12 @@ O throughput cresce quase linearmente até 10 threads (speedup 9,06×, eficiênc
 
 | Métrica | Comparação | Teste | Estatística | p-valor | Rejeita H0? |
 |---------|-----------|-------|------------|---------|------------|
-| paralelismo_tempo | 1vs10 | t_pareado | -89.7676 | 0.0 | **sim** |
-| paralelismo_tempo | 1vs10 | wilcoxon | 0.0 | 0.0 | **sim** |
-| paralelismo_tempo | 10vs16 | t_pareado | -21.7264 | 0.0 | **sim** |
-| paralelismo_tempo | 10vs16 | wilcoxon | 0.0 | 0.0 | **sim** |
-| sysbench_eps | 1vs10 | t_pareado | -2448.2937 | 0.0 | **sim** |
-| sysbench_eps | 1vs10 | wilcoxon | 0.0 | 0.0 | **sim** |
+| paralelismo_tempo | 1vs10 | t_pareado | -89.7676 | < 0.001 | **sim** |
+| paralelismo_tempo | 1vs10 | wilcoxon | 0.0 | < 0.001 | **sim** |
+| paralelismo_tempo | 10vs16 | t_pareado | -21.7264 | < 0.001 | **sim** |
+| paralelismo_tempo | 10vs16 | wilcoxon | 0.0 | < 0.001 | **sim** |
+| sysbench_eps | 1vs10 | t_pareado | -2448.2937 | < 0.001 | **sim** |
+| sysbench_eps | 1vs10 | wilcoxon | 0.0 | < 0.001 | **sim** |
 | sysbench_eps | 10vs16 | t_pareado | -0.2501 | 0.804253 | **não** |
 | sysbench_eps | 10vs16 | wilcoxon | 168.0 | 0.19093 | **não** |
 
@@ -183,7 +187,7 @@ O experimento A revelou que o overhead de criação de processos Python com o m�
 
 ### 5.3 Contenção de Cache L3
 
-Cada processo no experimento A aloca duas matrizes 800×800 de float64 (~5,1 MB cada par). Com 4 processos: ~20,5 MB de dados ativos — próximo ao limite do L3 (24 MB). Com 10+ processos, os dados excedem o L3, forçando acessos à DRAM. Os dados de largura de banda (Fig. 3, mbw) mostram degradação expressiva ao escalar o tamanho do bloco de 16 MiB (dentro do L3) para 1.024 MiB (DRAM), confirmando que a hierarquia de cache é um gargalo ativo.
+Cada processo no experimento A aloca duas matrizes 800×800 de float64 (~5,1 MB cada par). Com 4 processos: ~20,5 MB de dados ativos — próximo ao limite do L3 (24 MB). Com 10+ processos, os dados excedem o L3, forçando acessos à DRAM. Os dados de largura de banda (Fig. 3, mbw) ilustram a diferença de banda ao escalar o tamanho do bloco de 16 MiB para 1.024 MiB, indicando que a hierarquia de cache é um fator relevante para a carga estudada. Ressalta-se, porém, que a contenção de L3 é aqui *inferida* a partir da relação entre o conjunto de trabalho e a capacidade do cache: não foram coletados contadores de *last-level cache miss* via `perf`, ficando a quantificação direta como trabalho futuro.
 
 ### 5.4 Comparação com Dados Piloto
 
@@ -227,14 +231,14 @@ maximizing on-chip parallelism. In: **Proceedings of the 22nd Annual
 International Symposium on Computer Architecture (ISCA)**, 1995,
 p. 392–403. DOI: 10.1145/223982.224449.
 
-[2] EYERMAN, S.; EECKHOUT, L. A counter architecture for online DVFS
-profitability estimation. **IEEE Transactions on Computers**, v. 60, n. 8,
-p. 1173–1185, 2011. DOI: 10.1109/TC.2010.198.
+[2] EYERMAN, S.; EECKHOUT, L. Per-thread cycle accounting in SMT processors.
+In: **Proceedings of the 14th International Conference on Architectural Support
+for Programming Languages and Operating Systems (ASPLOS)**, 2009, p. 133–144.
+DOI: 10.1145/1508244.1508260.
 
-[3] BLAGODUROV, S. et al. A case for NUMA-aware contention management on
-multicore systems. In: **Proceedings of the 20th International Conference
-on Parallel Architectures and Compilation Techniques (PACT)**, 2011,
-p. 557–558.
+[3] BLAGODUROV, S.; ZHURAVLEV, S.; DASHTI, M.; FEDOROVA, A. A case for
+NUMA-aware contention management on multicore systems. In: **Proceedings of
+the 2011 USENIX Annual Technical Conference (USENIX ATC)**, 2011.
 
 [4] HILL, M. D.; MARTY, M. R. Amdahl's law in the multicore era.
 **IEEE Computer**, v. 41, n. 7, p. 33–38, jul. 2008.
@@ -248,10 +252,10 @@ Product Brief: Raptor Lake**. Santa Clara: Intel, 2022. Disponível em:
 https://www.intel.com/content/www/us/en/products/docs/processors/core/
 13th-gen-core-mobile-processors-brief.html. Acesso em: 25 maio 2026.
 
-[7] MAZOYER, P. et al. Reproducibility in performance benchmarking:
-the impact of OS and hardware settings. In: **Proceedings of the 10th
-ACM/SPEC International Conference on Performance Engineering (ICPE)**,
-2019, p. 75–82. DOI: 10.1145/3297663.3310309.
+[7] MYTKOWICZ, T.; DIWAN, A.; HAUSWIRTH, M.; SWEENEY, P. F. Producing wrong
+data without doing anything obviously wrong! In: **Proceedings of the 14th
+International Conference on Architectural Support for Programming Languages
+and Operating Systems (ASPLOS)**, 2009, p. 265–276. DOI: 10.1145/1508244.1508275.
 
 [8] KOPYTOV, A. **SysBench: A Scriptable Database and System Performance
 Benchmark**. Versão 1.0.20. Disponível em: https://github.com/akopytov/sysbench.
